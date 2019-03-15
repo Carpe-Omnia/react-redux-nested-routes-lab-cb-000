@@ -19,7 +19,7 @@ class PetsPage extends Component {
       <div>
         <div>Pets Page</div>
           <ul>
-            {props.pets.map (function(pet){
+            {this.props.pets.map (function(pet){
               return(
                 <Link to={`/pets/${pet.id}`} >
                   <li>
