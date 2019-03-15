@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 import PetsPage from '../containers/PetsPage';
+import PetsShow from '../containers/PetsShow';
 
 const App = (props) => 
   <Router>
@@ -11,6 +12,7 @@ const App = (props) =>
       </div>
       <Route exact path="/" render={() => <h3>Welcome to the Pets List App</h3>} />
       <Route path="/pets" component={PetsPage} />
+      <Route path="/pets/:petId" component={PetsShow} />
     </div>
   </Router>;
 
